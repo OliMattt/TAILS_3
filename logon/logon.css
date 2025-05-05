@@ -1,0 +1,347 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F5FFFA; /* Branco Gelado */
+    color: #556B2F; /* Verde Oliva */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+.cabecalho-cliente {
+    background: linear-gradient(135deg, #2E8B57, #3CB371); /* Verde Floresta para Verde Folha */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-cliente ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.nav-cliente a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.nav-cliente a:hover {
+    color: #98FB98; /* Verde Menta */
+}
+
+.btn-sair {
+    color: #ff6b6b !important;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    padding: 2rem 0;
+}
+
+.saudacao h1 {
+    color: #2E8B57; /* Verde Floresta */
+    margin-bottom: 0.5rem;
+}
+
+.saudacao p {
+    color: #3CB371; /* Verde Folha */
+}
+
+/* Seção Pets */
+.pets-cadastrados {
+    margin: 2rem 0;
+}
+
+.pets-cadastrados h2 {
+    color: #2E8B57; /* Verde Floresta */
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pets-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.pet-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: 1px solid #98FB98; /* Verde Menta */
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.pet-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #3CB371; /* Verde Folha */
+}
+
+.pet-card h3 {
+    color: #2E8B57; /* Verde Floresta */
+    margin-bottom: 0.5rem;
+}
+
+.pet-card p {
+    color: #556B2F; /* Verde Oliva */
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.btn-agendar {
+    background-color: #2E8B57; /* Verde Floresta */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-agendar:hover {
+    background-color: #3CB371; /* Verde Folha */
+}
+
+.novo-pet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px dashed #98FB98; /* Verde Menta */
+}
+
+.novo-pet i {
+    font-size: 2rem;
+    color: #3CB371; /* Verde Folha */
+    margin-bottom: 1rem;
+}
+
+.novo-pet h3 {
+    color: #556B2F; /* Verde Oliva */
+}
+
+/* Seção Agendamentos */
+.agendamento-section {
+    margin: 2rem 0;
+}
+
+.agendamento-section h2 {
+    color: #2E8B57; /* Verde Floresta */
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.agendamentos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.consulta-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3CB371; /* Verde Folha */
+}
+
+.consulta-info h3 {
+    color: #2E8B57; /* Verde Floresta */
+    margin-bottom: 0.5rem;
+}
+
+.consulta-info p {
+    color: #556B2F; /* Verde Oliva */
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 0.3rem;
+}
+
+.consulta-acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cancelar, .btn-detalhes {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-cancelar {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background-color: #ff5252;
+}
+
+.btn-detalhes {
+    background-color: #98FB98; /* Verde Menta */
+    color: #556B2F; /* Verde Oliva */
+}
+
+.btn-detalhes:hover {
+    background-color: #7FFFD4; /* Verde Água */
+}
+
+/* Formulário de Agendamento */
+.novo-agendamento {
+    margin: 2rem 0;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid #2E8B57; /* Verde Floresta */
+}
+
+.novo-agendamento h2 {
+    color: #2E8B57; /* Verde Floresta */
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-agendamento {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2E8B57; /* Verde Floresta */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #98FB98; /* Verde Menta */
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-confirmar {
+    grid-column: 1 / -1;
+    background-color: #2E8B57; /* Verde Floresta */
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-confirmar:hover {
+    background-color: #3CB371; /* Verde Folha */
+}
+
+/* Rodapé */
+.rodape-cliente {
+    background-color: #2E8B57; /* Verde Floresta */
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+.rodape-cliente p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-cliente ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .consulta-card {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .consulta-info p {
+        justify-content: center;
+    }
+    
+    .consulta-acoes {
+        width: 100%;
+        justify-content: center;
+    }
+}
