@@ -4,6 +4,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
         }
         
         body {
@@ -53,6 +54,7 @@
         
         nav ul {
             display: flex;
+            align-items: center;
             list-style: none;
         }
         
@@ -70,13 +72,20 @@
         nav ul li a:hover {
             color: #0a4100;
         }
+
+        .botao-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
         
         .btn {
             display: inline-block;
             background-color: #a9ff9a;
             color: #2c3e50;
             padding: 10px 20px;
-            border-radius: 30px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
@@ -326,6 +335,7 @@
         
         .social-links {
             display: flex;
+            margin-top: 6px;
             gap: 15px;
         }
         
