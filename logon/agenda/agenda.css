@@ -1,0 +1,429 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header-agenda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c8a4a;
+}
+
+.logo i {
+    font-size: 28px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.date-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.date-navigation h2 {
+    min-width: 180px;
+    text-align: center;
+}
+
+.btn-primary, .btn-today {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: #2c8a4a;
+    color: white;
+}
+
+.btn-today {
+    background-color: #e1e5eb;
+    color: #333;
+}
+
+.btn-primary:hover {
+    background-color: #237a3f;
+}
+
+/* Agenda Container */
+.agenda-container {
+    display: flex;
+    height: calc(100vh - 120px);
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    overflow: auto;
+    background-color: white;
+}
+
+.agenda-sidebar {
+    width: 80px;
+    flex-shrink: 0;
+    border-right: 1px solid #e1e5eb;
+}
+
+.time-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.time-slots {
+    overflow-y: auto;
+    height: calc(100% - 60px);
+}
+
+.time-slot {
+    height: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5px;
+    font-size: 12px;
+    color: #666;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.agenda-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.days-header {
+    display: flex;
+    height: 60px;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.day-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-right: 1px solid #f0f2f5;
+}
+
+.day-header:last-child {
+    border-right: none;
+}
+
+.day-name {
+    font-size: 14px;
+    color: #666;
+}
+
+.day-date {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.today .day-date {
+    background-color: #2c8a4a;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agenda-grid {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+}
+
+.day-column {
+    flex: 1;
+    border-right: 1px solid #f0f2f5;
+    position: relative;
+}
+
+.day-column:last-child {
+    border-right: none;
+}
+
+.time-slot-grid {
+    height: 60px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.agendamento {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 13px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.agendamento.consulta {
+    background-color: #d4edda;
+    border-left: 3px solid #28a745;
+}
+
+.agendamento.vacina {
+    background-color: #fff3cd;
+    border-left: 3px solid #ffc107;
+}
+
+.agendamento.exame {
+    background-color: #cce5ff;
+    border-left: 3px solid #007bff;
+}
+
+.agendamento.banho {
+    background-color: #e2e3e5;
+    border-left: 3px solid #6c757d;
+}
+
+.agendamento.cirurgia {
+    background-color: #f8d7da;
+    border-left: 3px solid #dc3545;
+}
+
+.agendamento-titulo {
+    font-weight: 500;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.agendamento-info {
+    display: flex;
+    font-size: 11px;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-actions, .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-submit, .btn-edit {
+    padding: 10px 20px;
+    background-color: #2c8a4a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-cancel {
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-submit:hover, .btn-edit:hover {
+    background-color: #237a3f;
+}
+
+.btn-cancel:hover {
+    background-color: #e9ecef;
+}
+
+/* Detalhes do Agendamento */
+.detalhes-item {
+    margin-bottom: 15px;
+}
+
+.detalhes-item h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.detalhes-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-agenda {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .date-navigation {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .agenda-container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .agenda-sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .time-slots {
+        display: flex;
+        height: auto;
+    }
+
+    .time-slot {
+        width: 60px;
+        height: 40px;
+        align-items: center;
+    }
+
+    .days-header {
+        display: none;
+    }
+
+    .agenda-grid {
+        flex-direction: column;
+    }
+
+    .day-column {
+        border-right: none;
+        border-bottom: 1px solid #e1e5eb;
+    }
+
+    .modal-content {
+        margin: 20px auto;
+        width: 95%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
