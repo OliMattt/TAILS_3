@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Clínica Veterinária</title>
+    <link rel="stylesheet" href="agenda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-agenda">
+            <div class="logo">
+                <a href="../logon.html" class="fas fa-home">
+                </a>
+
+                <i class="fas fa-paw"></i>
+                <h1>Agenda Veterinária</h1>
+            </div>
+            <div class="header-actions">
+                <button id="btnNovoAgendamento" class="btn-primary">
+                    <i class="fas fa-plus"></i> Novo Agendamento
+                </button>
+                <div class="date-navigation">
+                    <button id="btnPrevWeek"><i class="fas fa-chevron-left"></i></button>
+                    <h2 id="currentWeek">Semana atual</h2>
+                    <button id="btnNextWeek"><i class="fas fa-chevron-right"></i></button>
+                    <button id="btnToday" class="btn-today">Hoje</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="agenda-container">
+            <div class="agenda-sidebar">
+                <div class="time-column">
+                    <div class="time-header">Horário</div>
+                    <div class="time-slots">
+                        <!-- Horários serão gerados via JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="agenda-main">
+                <div class="days-header">
+                    <!-- Dias da semana serão gerados via JavaScript -->
+                </div>
+                <div class="agenda-grid">
+                    <!-- Grade de agendamentos será gerada via JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Novo Agendamento -->
+        <div id="modalAgendamento" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2><i class="fas fa-calendar-plus"></i> Novo Agendamento</h2>
+                <form id="formAgendamento">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputPet"><i class="fas fa-paw"></i> Pet:</label>
+                            <select id="inputPet" required>
+                                <option value="">Selecione um pet</option>
+                                <!-- Opções serão preenchidas via JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputServico"><i class="fas fa-stethoscope"></i> Serviço:</label>
+                            <select id="inputServico" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="consulta">Consulta</option>
+                                <option value="vacina">Vacinação</option>
+                                <option value="exame">Exames</option>
+                                <option value="banho">Banho e Tosa</option>
+                                <option value="cirurgia">Cirurgia</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputData"><i class="fas fa-calendar-day"></i> Data:</label>
+                            <input type="date" id="inputData" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputHora"><i class="fas fa-clock"></i> Hora:</label>
+                            <input type="time" id="inputHora" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputVeterinario"><i class="fas fa-user-md"></i> Veterinário:</label>
+                        <select id="inputVeterinario" required>
+                            <option value="">Selecione um veterinário</option>
+                            <option value="1">Dra. Ana Silva</option>
+                            <option value="2">Dr. Carlos Mendes</option>
+                            <option value="3">Dra. Beatriz Oliveira</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputObservacoes"><i class="fas fa-comment"></i> Observações:</label>
+                        <textarea id="inputObservacoes" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel">Cancelar</button>
+                        <button type="submit" class="btn-submit">Agendar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal de Detalhes -->
+        <div id="modalDetalhes" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2><i class="fas fa-calendar-check"></i> Detalhes do Agendamento</h2>
+                <div id="detalhesConteudo">
+                    <!-- Conteúdo será preenchido via JavaScript -->
+                </div>
+                <div class="modal-actions">
+                    <button id="btnEditar" class="btn-edit"><i class="fas fa-edit"></i> Editar</button>
+                    <button id="btnCancelar" class="btn-cancel"><i class="fas fa-times"></i> Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="agenda.js"></script>
+</body>
+</html>
