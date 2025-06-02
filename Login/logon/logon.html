@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAILS - Área do Cliente</title>
+    <link rel="stylesheet" href="logon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho-cliente">
+        <div class="container">
+            <div class="logo-area">
+                <img src="images/logo-tails.png" alt="TAILS" class="logo">
+                <span>Área do Cliente</span>
+            </div>
+            <nav class="nav-cliente">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="Pets/pets.html"><i class="fas fa-paw"></i> Meus Pets</a></li>
+                    <li><a href="agenda/agenda.html"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
+                    <li><a href="/index.html" class="btn-sair"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <div class="container">
+            <section class="saudacao">
+                <h1>Olá, Vet!</h1>
+                <p>Bem-vindo de volta à TAILS</p>
+            </section>
+
+            <section class="pets-cadastrados">
+                <h2><i class="fas fa-paw"></i> Seus Pets</h2>
+                <div class="pets-lista">
+                    <div class="pet-card">
+                        <img src="https://via.placeholder.com/100" alt="Rex">
+                        <h3>Rex</h3>
+                        <p>Labrador - 5 anos</p>
+                        <a href="#" class="btn-agendar">Agendar Consulta</a>
+                    </div>
+                    <div class="pet-card">
+                        <img src="https://via.placeholder.com/100" alt="Luna">
+                        <h3>Luna</h3>
+                        <p>SRD - 2 anos</p>
+                        <a href="#" class="btn-agendar">Agendar Consulta</a>
+                    </div>
+                    <div class="pet-card novo-pet">
+                        <a href="Pets/pets.html">
+                        <i class="fa-plus"></i>
+                        <h3>Adicionar Pet</h3>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="agendamento-section">
+                <h2><i class="fas fa-calendar-alt"></i> Próximas Consultas</h2>
+                <div class="agendamentos-lista">
+                    <div class="consulta-card">
+                        <div class="consulta-info">
+                            <h3>Consulta de Rotina</h3>
+                            <p><i class="fas fa-paw"></i> Rex</p>
+                            <p><i class="fas fa-calendar-day"></i> 15/06/2023 - 14:30</p>
+                            <p><i class="fas fa-clinic-medical"></i> Clínica Veterinaria</p>
+                        </div>
+                        <div class="consulta-acoes">
+                            <button class="btn-cancelar"><i class="fas fa-times"></i> Cancelar</button>
+                            <button class="btn-detalhes"><i class="fas fa-info-circle"></i> Detalhes</button>
+                        </div>
+                    </div>
+
+                    <div class="consulta-card">
+                        <div class="consulta-info">
+                            <h3>Vacinação Anual</h3>
+                            <p><i class="fas fa-paw"></i> Luna</p>
+                            <p><i class="fas fa-calendar-day"></i> 22/06/2023 - 10:00</p>
+                            <p><i class="fas fa-clinic-medical"></i> Sala de vacinação 3</p>
+                        </div>
+                        <div class="consulta-acoes">
+                            <button class="btn-cancelar"><i class="fas fa-times"></i> Cancelar</button>
+                            <button class="btn-detalhes"><i class="fas fa-info-circle"></i> Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="novo-agendamento">
+                <h2><i class="fas fa-plus-circle"></i> Nova Consulta</h2>
+                <form class="form-agendamento">
+                    <div class="form-group">
+                        <label for="pet"><i class="fas fa-paw"></i> Selecione o Pet:</label>
+                        <select id="pet" name="pet">
+                            <option value="rex">Rex</option>
+                            <option value="luna">Luna</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clinica"><i class="fas fa-clinic-medical"></i> Clínica:</label>
+                        <select id="clinica" name="clinica">
+                            <option value="pet-saude">Clínica Pet Saúde</option>
+                            <option value="vet-center">Vet Center</option>
+                            <option value="animal-care">Animal Care</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servico"><i class="fas fa-stethoscope"></i> Serviço:</label>
+                        <select id="servico" name="servico">
+                            <option value="consulta">Consulta de Rotina</option>
+                            <option value="vacina">Vacinação</option>
+                            <option value="banho">Banho e Tosa</option>
+                            <option value="exame">Exames</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data"><i class="fas fa-calendar-day"></i> Data:</label>
+                        <input type="date" id="data" name="data">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora"><i class="fas fa-clock"></i> Horário:</label>
+                        <input type="time" id="hora" name="hora">
+                    </div>
+
+                    <button type="submit" class="btn-confirmar"><i class="fas fa-calendar-check"></i> Confirmar Agendamento</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="rodape-cliente">
+        <div class="container">
+            <p>TAILS - Gestão Veterinária Integrada</p>
+            <p>&copy; 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

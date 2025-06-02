@@ -1,0 +1,272 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F5FFFA;
+    color: #2E4A3B;
+    line-height: 1.6;
+}
+
+/* Container Principal */
+.cadastro-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(46, 139, 87, 0.1);
+}
+
+.cadastro-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cadastro-header .logo {
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.cadastro-header h1 {
+    color: #2E8B57;
+    margin-bottom: 10px;
+}
+
+.cadastro-header p {
+    color: #556B2F;
+}
+
+/* Formulário */
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-section {
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #F5FFFA;
+    border: 1px solid #98FB98;
+}
+
+.form-section h2 {
+    color: #2E8B57;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2E8B57;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #98FB98;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3CB371;
+    box-shadow: 0 0 0 3px rgba(60, 179, 113, 0.2);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Planos */
+.planos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.plano-card {
+    border: 1px solid #98FB98;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.plano-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(46, 139, 87, 0.1);
+}
+
+.plano-card.plano-selecionado {
+    border: 2px solid #2E8B57;
+    background-color: rgba(46, 139, 87, 0.05);
+}
+
+.plano-recomendado {
+    border: 2px solid #3CB371;
+}
+
+.recomendado-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background-color: #3CB371;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.plano-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plano-header img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.plano-header h3 {
+    color: #2E8B57;
+    margin-bottom: 5px;
+}
+
+.plano-preco {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2E8B57;
+}
+
+.plano-preco span {
+    font-size: 16px;
+    font-weight: normal;
+    color: #556B2F;
+}
+
+.plano-beneficios {
+    list-style: none;
+}
+
+.plano-beneficios li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #556B2F;
+}
+
+.plano-beneficios i {
+    color: #3CB371;
+    margin-top: 3px;
+}
+
+/* Termos e Ações */
+.form-termos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-termos input {
+    width: auto;
+}
+
+.form-termos label {
+    color: #556B2F;
+    font-size: 14px;
+}
+
+.form-termos a {
+    color: #2E8B57;
+    font-weight: 500;
+}
+
+.btn-cadastrar {
+    width: 100%;
+    padding: 16px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-cadastrar:hover {
+    background-color: #3CB371;
+}
+
+/* Link para Login */
+.login-link {
+    text-align: center;
+    margin-top: 30px;
+    color: #556B2F;
+}
+
+.login-link a {
+    color: #2E8B57;
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .planos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Máscaras e Validações */
+input.error {
+    border-color: #FF6B6B !important;
+}
+
+.error-message {
+    color: #FF6B6B;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}

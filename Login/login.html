@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TAILS Clínica Veterinária</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo-area">
+                <img src="/images/logo.png" alt="TAILS" class="logo">
+                <h1>TAILS</h1>
+                <p>Gestão Veterinária Integrada</p>
+            </div>
+
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha"><i class="fas fa-lock"></i> Senha:</label>
+                    <input type="password" id="senha" placeholder="••••••••" required>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+
+                <a href="logon/logon.html" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i>Entrar
+                </a>
+
+                <div class="divider">
+                    <span>ou</span>
+                </div>
+
+                <button type="button" class="btn-google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                    Entrar com Google
+                </button>
+            </form>
+
+            <div class="register-link">
+                Não tem uma conta? <a href="/Cadastro/Cadastro.html">Cadastre-se</a>
+            </div>
+        </div>
+
+        <div class="login-footer">
+            <p>© 2025 TAILS - Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="#">Termos de uso</a>
+                <a href="#">Política de privacidade</a>
+                <a href="#">Ajuda</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
