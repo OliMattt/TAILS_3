@@ -1,0 +1,47 @@
+[debug] [2025-06-03T15:11:58.312Z] ----------------------------------------------------------------------
+[debug] [2025-06-03T15:11:58.314Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mateu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-06-03T15:11:58.315Z] CLI Version:   14.5.1
+[debug] [2025-06-03T15:11:58.315Z] Platform:      win32
+[debug] [2025-06-03T15:11:58.315Z] Node Version:  v22.13.1
+[debug] [2025-06-03T15:11:58.315Z] Time:          Tue Jun 03 2025 12:11:58 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2025-06-03T15:11:58.315Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-03T15:11:58.473Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-03T15:11:58.474Z] > authorizing via signed-in user (mateuzeiro@gmail.com)
+[debug] [2025-06-03T15:11:58.474Z] [iam] checking project tails-a3115 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-03T15:11:58.475Z] Checked if tokens are valid: true, expires at: 1748966573760
+[debug] [2025-06-03T15:11:58.475Z] Checked if tokens are valid: true, expires at: 1748966573760
+[debug] [2025-06-03T15:11:58.475Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tails-a3115:testIamPermissions [none]
+[debug] [2025-06-03T15:11:58.475Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tails-a3115:testIamPermissions x-goog-quota-user=projects/tails-a3115
+[debug] [2025-06-03T15:11:58.475Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tails-a3115:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-03T15:11:59.439Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tails-a3115:testIamPermissions 200
+[debug] [2025-06-03T15:11:59.439Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tails-a3115:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-03T15:11:59.440Z] Checked if tokens are valid: true, expires at: 1748966573760
+[debug] [2025-06-03T15:11:59.440Z] Checked if tokens are valid: true, expires at: 1748966573760
+[debug] [2025-06-03T15:11:59.440Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tails-a3115 [none]
+[debug] [2025-06-03T15:11:59.906Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tails-a3115 200
+[debug] [2025-06-03T15:11:59.906Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tails-a3115 {"projectId":"tails-a3115","projectNumber":"1084033198980","displayName":"Tails","name":"projects/tails-a3115","resources":{"hostingSite":"tails-a3115"},"state":"ACTIVE","etag":"1_f0b338fb-b07d-45e2-994e-ff6e322c9e6c"}
+[info] 
+[info] === Deploying to 'tails-a3115'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-06-03T15:11:59.914Z] Checked if tokens are valid: true, expires at: 1748966573760
+[debug] [2025-06-03T15:11:59.914Z] Checked if tokens are valid: true, expires at: 1748966573760
+[debug] [2025-06-03T15:11:59.914Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tails-a3115/versions [none]
+[debug] [2025-06-03T15:11:59.914Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tails-a3115/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-06-03T15:12:01.053Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tails-a3115/versions 500
+[debug] [2025-06-03T15:12:01.053Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tails-a3115/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: Request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tails-a3115/versions had HTTP Error: 500, Internal error encountered.
+[debug] [2025-06-03T15:12:01.055Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
