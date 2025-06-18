@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Pets - TAILS</title>
+    <link rel="stylesheet" href="pets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div id="loader-overlay">
+        <i class="fas fa-spinner fa-spin"></i>
+    </div>
+
+    <div class="container" style="display: none;">
+        <header>
+            <h1><i class="fas fa-paw"></i> Gestão de Pets</h1>
+            <nav class="nav-cliente">
+                <ul>
+                    <li><a href="../dashboard.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../agenda/agenda.html"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
+                    <li><a href="#" id="btnLogout"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="form-cadastro">
+            <h2>Registrar Novo Pet</h2>
+            <form id="petForm">
+                <div class="form-group">
+                    <label for="petName">Nome do Pet*</label>
+                    <input type="text" id="petName" required>
+                </div>
+                <div class="form-group">
+                    <label for="tutorSelect">Tutor (Dono)*</label>
+                    <select id="tutorSelect" required>
+                        <option value="">Carregando tutores...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="petType">Espécie*</label>
+                    <select id="petType" required>
+                        <option value="">Selecione...</option>
+                        <option value="Cachorro">Cachorro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Ave">Ave</option>
+                        <option value="Roedor">Roedor</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="petBreed">Raça</label>
+                    <input type="text" id="petBreed">
+                </div>
+                <div class="form-group">
+                    <label for="petAge">Idade (anos)</label>
+                    <input type="number" id="petAge" min="0" max="40">
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-save"></i> Cadastrar Pet
+                </button>
+            </form>
+        </section>
+
+        <section class="lista-pets">
+            <h2>Pets Cadastrados</h2>
+            <div id="petsContainer" class="pets-grid">
+                <p>Carregando pets...</p>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="../../firebase-config.js"></script>
+    <script type="module" src="pets.js"></script>
+</body>
+</html>

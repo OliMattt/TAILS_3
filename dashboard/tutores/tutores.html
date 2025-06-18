@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Tutores - TAILS</title>
+    <link rel="stylesheet" href="tutores.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-users"></i> Gestão de Tutores (Clientes)</h1>
+            <nav>
+                <a href="../dashboard.html"><i class="fas fa-arrow-left"></i> Voltar ao Dashboard</a>
+            </nav>
+        </header>
+
+        <section class="form-cadastro">
+            <h2><i class="fas fa-user-plus"></i> Registrar Novo Tutor</h2>
+            <form id="tutorForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="tutorName">Nome Completo*</label>
+                        <input type="text" id="tutorName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tutorEmail">E-mail</label>
+                        <input type="email" id="tutorEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="tutorPhone">Telefone*</label>
+                        <input type="tel" id="tutorPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tutorCpf">CPF</label>
+                        <input type="text" id="tutorCpf">
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-save"></i> Cadastrar Tutor
+                </button>
+            </form>
+        </section>
+
+        <section class="lista-tutores">
+            <h2><i class="fas fa-list"></i> Tutores Cadastrados</h2>
+            <div id="tutorsList" class="tutors-grid">
+                <p>Carregando tutores...</p>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="../../firebase-config.js"></script>
+    <script type="module" src="tutores.js"></script>
+</body>
+</html>

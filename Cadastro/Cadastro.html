@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clínica - TAILS</title>
+    <link rel="stylesheet" href="Cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div class="cadastro-container">
+        <div class="cadastro-header">
+            <img src="/images/logo.png" alt="TAILS" class="logo">
+            <h1>Cadastro da Clínica</h1>
+            <p>Preencha os dados abaixo para criar sua conta</p>
+        </div>
+
+        <form class="cadastro-form">
+            <div class="form-section">
+                <h2><i class="fas fa-clinic-medical"></i> Informações da Clínica</h2>
+                
+                <div class="form-group">
+                    <label for="nomeClinica">Nome da Clínica*</label>
+                    <input type="text" id="nomeClinica" placeholder="Ex: Pet Saúde Veterinária" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ*</label>
+                        <input type="text" id="cnpj" placeholder="00.000.000/0000-00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" placeholder="clinica@exemplo.com" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><i class="fas fa-map-marker-alt"></i> Endereço</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cep">CEP*</label>
+                        <input type="text" id="cep" placeholder="00000-000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero">Número*</label>
+                        <input type="text" id="numero" placeholder="123" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="logradouro">Logradouro*</label>
+                    <input type="text" id="logradouro" placeholder="Rua, Avenida, etc." required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bairro">Bairro*</label>
+                        <input type="text" id="bairro" placeholder="Centro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade*</label>
+                        <input type="text" id="cidade" placeholder="Sua Cidade" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="Estado">Estado*</label>
+                        <input type="text" id="estado" placeholder="Seu Estado" required>
+                    </div>
+
+                <div class="form-group">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" placeholder="Sala, Andar, etc.">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><i class="fas fa-crown"></i> Plano de Assinatura</h2>
+                <p>Escolha o plano que melhor atende sua clínica</p>
+                
+                <div class="planos-container">
+                    <div class="plano-card" data-plano="basico">
+                        <div class="plano-header">
+                            
+                            <h3>Básico</h3>
+                            <div class="plano-preco">R$ 99<span>/mês</span></div>
+                        </div>
+                        <ul class="plano-beneficios">
+                            <li><i class="fas fa-check"></i> Até 5 veterinários</li>
+                            <li><i class="fas fa-check"></i> 100 consultas/mês</li>
+                            <li><i class="fas fa-check"></i> Suporte por e-mail</li>
+                            <li><i class="fas fa-check"></i> Funcionalidades básicas</li>
+                        </ul>
+                    </div>
+
+                    <div class="plano-card plano-recomendado" data-plano="premium">
+                        <div class="plano-header">
+                            <h3>Premium</h3>
+                            <div class="plano-preco">R$ 299<span>/mês</span></div>
+                            <div class="recomendado-badge">Recomendado</div>
+                        </div>
+                        <ul class="plano-beneficios">
+                            <li><i class="fas fa-check"></i> Até 15 veterinários</li>
+                            <li><i class="fas fa-check"></i> Consultas ilimitadas</li>
+                            <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                            <li><i class="fas fa-check"></i> Relatórios avançados</li>
+                        </ul>
+                    </div>
+
+                    <div class="plano-card" data-plano="empresarial">
+                        <div class="plano-header">
+                            <h3>Empresarial</h3>
+                            <div class="plano-preco">R$ 499<span>/mês</span></div>
+                        </div>
+                        <ul class="plano-beneficios">
+                            <li><i class="fas fa-check"></i> Veterinários ilimitados</li>
+                            <li><i class="fas fa-check"></i> Consultas ilimitadas</li>
+                            <li><i class="fas fa-check"></i> Suporte 24 horas, 7 dias na semana</li>
+                            <li><i class="fas fa-check"></i> Analytics avançados</li>
+                            <li><i class="fas fa-check"></i> Notificações Whatsapp</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <input type="hidden" id="planoSelecionado" name="plano" required>
+            </div>
+
+            <div class="form-section">
+                <h2><i class="fas fa-user-shield"></i> Dados de Acesso</h2>
+                
+                <div class="form-group">
+                    <label for="nomeResponsavel">Nome do Responsável*</label>
+                    <input type="text" id="nomeResponsavel" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="senha">Senha*</label>
+                        <input type="password" id="senha" placeholder="Mínimo 8 caracteres" required minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmarSenha">Confirmar Senha*</label>
+                        <input type="password" id="confirmarSenha" placeholder="Digite novamente" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <div class="form-termos">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Li e aceito os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a></label>
+                </div>
+                
+
+                <button type="submit" class="btn-cadastrar">
+                    <i class="fas fa-check"></i>Entrar
+                </button>
+                
+            </div>
+        </form>
+
+        <div class="login-link">
+            Já tem uma conta? <a href="/Login/login.html">Faça login</a>
+        </div>
+    </div>
+
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="Cadastro.js"></script>
+</body>
+</html>
