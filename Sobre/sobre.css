@@ -9,7 +9,6 @@
     --preto: #333333;
 }
 
-/* Reset e estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +29,6 @@ body {
     padding: 20px 0;
 }
 
-/* Header */
 header {
             background: linear-gradient(135deg, #001a0a, #129537);
             color: white;
@@ -112,7 +110,7 @@ header {
             background-color: #63ba7c;
             transform: translateY(-2px);
         }
-/* Seção Sobre */
+
 .about {
     background-color: var(--branco);
     padding: 30px;
@@ -127,7 +125,6 @@ header {
     text-align: center;
 }
 
-/* Seção Desenvolvedores */
 .developers {
     margin: 40px 0;
 }
@@ -201,7 +198,6 @@ header {
     color: var(--verde-escuro);
 }
 
-/* Seção Valores */
 .values {
     margin: 50px 0;
 }
@@ -243,7 +239,6 @@ header {
     margin-bottom: 15px;
 }
 
-/* Footer */
 .footer {
     background-color: var(--verde-escuro);
     color: var(--branco);
@@ -257,7 +252,6 @@ header {
     opacity: 0.9;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .cards-container, .values-container {
         grid-template-columns: 1fr;

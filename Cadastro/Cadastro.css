@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Container Principal */
 .cadastro-container {
     max-width: 1000px;
     margin: 40px auto;
@@ -100,7 +99,6 @@ body {
     flex: 1;
 }
 
-/* Planos */
 .planos-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -187,7 +185,6 @@ body {
     margin-top: 3px;
 }
 
-/* Termos e Ações */
 .form-termos {
     display: flex;
     align-items: center;
@@ -230,7 +227,6 @@ body {
     background-color: #3CB371;
 }
 
-/* Link para Login */
 .login-link {
     text-align: center;
     margin-top: 30px;

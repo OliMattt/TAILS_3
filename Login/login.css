@@ -7,25 +7,23 @@
 }
 
 body {
-    background-color: #F5FFFA; /* Branco Gelado */
+    background-color: #F5FFFA;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Container Principal */
 .login-container {
     width: 100%;
     max-width: 420px;
     padding: 20px;
 }
 
-/* Card de Login */
 .login-card {
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(46, 139, 87, 0.1); /* Verde Floresta com transparência */
+    box-shadow: 0 8px 20px rgba(46, 139, 87, 0.1);
     padding: 40px;
     text-align: center;
 }
@@ -40,13 +38,13 @@ body {
 }
 
 .logo-area h1 {
-    color: #2E8B57; /* Verde Floresta */
+    color: #2E8B57; 
     font-size: 28px;
     margin-bottom: 5px;
 }
 
 .logo-area p {
-    color: #556B2F; /* Verde Oliva */
+    color: #556B2F;
     font-size: 14px;
 }
 
@@ -63,14 +61,14 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: #2E8B57; /* Verde Floresta */
+    color: #2E8B57; 
     font-weight: 500;
 }
 
 .form-group input {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #98FB98; /* Verde Menta */
+    border: 1px solid #98FB98;
     border-radius: 8px;
     font-size: 16px;
     transition: border-color 0.3s;
@@ -78,8 +76,8 @@ body {
 
 .form-group input:focus {
     outline: none;
-    border-color: #3CB371; /* Verde Folha */
-    box-shadow: 0 0 0 2px rgba(60, 179, 113, 0.2); /* Verde Folha com transparência */
+    border-color: #3CB371;
+    box-shadow: 0 0 0 2px rgba(60, 179, 113, 0.2);
 }
 
 .forgot-password {
@@ -87,7 +85,7 @@ body {
     text-align: right;
     margin-top: 8px;
     font-size: 13px;
-    color: #3CB371; /* Verde Folha */
+    color: #3CB371;
     text-decoration: none;
 }
 
@@ -95,11 +93,10 @@ body {
     text-decoration: underline;
 }
 
-/* Botões */
 .btn-login {
     width: 100%;
     padding: 14px;
-    background-color: #2E8B57; /* Verde Floresta */
+    background-color: #2E8B57; 
     color: white;
     border: none;
     border-radius: 8px;
@@ -111,20 +108,20 @@ body {
 }
 
 .btn-login:hover {
-    background-color: #3CB371; /* Verde Folha */
+    background-color: #3CB371;
 }
 
 .divider {
     display: flex;
     align-items: center;
     margin: 20px 0;
-    color: #98FB98; /* Verde Menta */
+    color: #98FB98; 
 }
 
 .divider::before, .divider::after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid #98FB98; /* Verde Menta */
+    border-bottom: 1px solid #98FB98; 
 }
 
 .divider::before {
@@ -139,8 +136,8 @@ body {
     width: 100%;
     padding: 12px;
     background-color: white;
-    color: #556B2F; /* Verde Oliva */
-    border: 1px solid #98FB98; /* Verde Menta */
+    color: #556B2F; 
+    border: 1px solid #98FB98; 
     border-radius: 8px;
     font-size: 15px;
     font-weight: 500;
@@ -153,8 +150,8 @@ body {
 }
 
 .btn-google:hover {
-    background-color: #F5FFFA; /* Branco Gelado */
-    border-color: #3CB371; /* Verde Folha */
+    background-color: #F5FFFA;
+    border-color: #3CB371;
 }
 
 .btn-google img {
@@ -165,12 +162,12 @@ body {
 /* Links */
 .register-link {
     font-size: 14px;
-    color: #556B2F; /* Verde Oliva */
+    color: #556B2F; 
     margin-bottom: 10px;
 }
 
 .register-link a {
-    color: #2E8B57; /* Verde Floresta */
+    color: #2E8B57; 
     font-weight: 500;
     text-decoration: none;
 }
@@ -179,7 +176,6 @@ body {
     text-decoration: underline;
 }
 
-/* Rodapé */
 .login-footer {
     margin-top: 30px;
     text-align: center;
@@ -187,7 +183,7 @@ body {
 
 .login-footer p {
     font-size: 12px;
-    color: #98FB98; /* Verde Menta */
+    color: #98FB98; 
     margin-bottom: 10px;
 }
 
@@ -199,7 +195,7 @@ body {
 
 .footer-links a {
     font-size: 12px;
-    color: #3CB371; /* Verde Folha */
+    color: #3CB371;
     text-decoration: none;
 }
 

@@ -6,6 +6,8 @@
     <title>Login - TAILS Clínica Veterinária</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
     <div class="login-container">
@@ -28,16 +30,16 @@
                     <a href="#" class="forgot-password">Esqueceu a senha?</a>
                 </div>
 
-                <a href="logon/logon.html" class="btn-login">
-                    <i class="fas fa-sign-in-alt"></i>Entrar
-                </a>
+               <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Entrar
+                </button>
 
                 <div class="divider">
                     <span>ou</span>
                 </div>
 
-                <button type="button" class="btn-google">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+               <button type="button" class="btn-google">
+                    <i class="fab fa-google"></i>
                     Entrar com Google
                 </button>
             </form>
@@ -56,5 +58,7 @@
             </div>
         </div>
     </div>
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="login.js"></script>
 </body>
 </html>

@@ -9,7 +9,6 @@
     --preto: #333333;
 }
 
-/* Reset e estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +29,6 @@ body {
     padding: 20px 0;
 }
 
-/* Header */
 header {
             background: linear-gradient(135deg, #001a0a, #129537);
             color: white;
@@ -113,7 +111,6 @@ header {
             transform: translateY(-2px);
         }
 
-/* Seção Sobre Parceiros */
 .about-partners {
     background-color: var(--branco);
     padding: 30px;
@@ -128,7 +125,6 @@ header {
     text-align: center;
 }
 
-/* Seção Parceiros */
 .partners {
     margin: 40px 0;
 }
@@ -212,7 +208,6 @@ header {
     font-size: 0.8rem;
 }
 
-/* Seção Benefícios */
 .partnership-benefits {
     background-color: var(--branco);
     padding: 30px;
@@ -250,7 +245,6 @@ header {
     font-size: 1.2rem;
 }
 
-/* Footer */
 .footer {
     background-color: var(--verde-escuro);
     color: var(--branco);
@@ -264,7 +258,6 @@ header {
     opacity: 0.9;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .partners-container {
         grid-template-columns: 1fr;
